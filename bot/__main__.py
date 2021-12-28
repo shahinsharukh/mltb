@@ -56,7 +56,8 @@ def stats(update, context):
             f'├─<b>SWAP:</b> {swap_t} | <b>Used:</b> {swap_p}%\n'\
             f'├─💽<b>Memory Total:</b> {mem_t}\n'\
             f'├─💾<b>Memory Free:</b> {mem_a}\n'\
-            f'╰─💻<b>Memory Used:</b> {mem_u}\n'
+            f'├─💻<b>Memory Used:</b> {mem_u}\n'\
+            f'╰───『💥 <a href="https://t.me/+SpnPh2Gc8kHwwAAF"><b>𝐑𝐨𝐨𝐭 𝐆𝐚𝐦𝐞𝐫</b></a> 💥』\n'
     sendMessage(stats, context.bot, update)
 
 
@@ -240,7 +241,7 @@ def main():
     if os.path.isfile(".restartmsg"):
         with open(".restartmsg") as f:
             chat_id, msg_id = map(int, f)
-        bot.edit_message_text("Restarted successfully!", chat_id, msg_id)
+        bot.edit_message_text("╭──《♻️ 𝐁𝐎𝐓 𝐆𝐎𝐓 𝐑𝐄𝐒𝐓𝐀𝐑𝐓𝐄𝐃 ♻️》\n│\n├─𝐑𝐞-𝐌𝐢𝐫𝐫𝐨𝐫 𝐘𝐨𝐮𝐫 𝐓𝐡𝐢𝐧𝐠𝐬 🖤\n│\n├─🖥️ #𝐑𝐞𝐬𝐭𝐚𝐫𝐭𝐞𝐝\n│\n╰──『💥 𝐑𝐨𝐨𝐭 𝐆𝐚𝐦𝐞𝐫 💥』", chat_id, msg_id)
         os.remove(".restartmsg")
     elif OWNER_ID:
         try:
