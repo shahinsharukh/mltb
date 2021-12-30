@@ -43,9 +43,9 @@ def stats(update, context):
     mem_t = get_readable_file_size(memory.total)
     mem_a = get_readable_file_size(memory.available)
     mem_u = get_readable_file_size(memory.used)
-    stats = f'╭─🤖<b>Bot Uptime:</b> {currentTime}\n'\
+    stats = f'╭───『🤖 𝑩𝒐𝒕 𝑺𝒕𝒂𝒕𝒊𝒄𝒔 🤖』\n│\n├─⏳<b>Bot Uptime:</b> {currentTime}\n│\n'\
             f'├─💽<b>Total Disk Space:</b> {total}\n'\
-            f'├─💻<b>Used:</b> {used} | 💾<b>Free:</b> {free}\n'\
+            f'├─💻<b>Used:</b> {used}\n├─💾<b>Free:</b> {free}\n'\
             f'├─📤<b>Upload:</b> {sent}\n'\
             f'├─📥<b>Download:</b> {recv}\n'\
             f'├─🖥️<b>CPU:</b> {cpuUsage}%\n'\
@@ -53,7 +53,7 @@ def stats(update, context):
             f'├─💿<b>DISK:</b> {disk}%\n'\
             f'├─🛰️<b>Physical Cores:</b> {p_core}\n'\
             f'├─⚙️<b>Total Cores:</b> {t_core}\n'\
-            f'├─<b>SWAP:</b> {swap_t} | <b>Used:</b> {swap_p}%\n'\
+            f'├─⚡<b>SWAP:</b> {swap_t}\n├─🔱<b>Used:</b> {swap_p}%\n'\
             f'├─💽<b>Memory Total:</b> {mem_t}\n'\
             f'├─💾<b>Memory Free:</b> {mem_a}\n'\
             f'├─💻<b>Memory Used:</b> {mem_u}\n'\
@@ -73,7 +73,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
         sendMarkup(start_string, context.bot, update, reply_markup)
     else:
-        sendMarkup('Not Authorized user, deploy your own mirror-leech bot', context.bot, update, reply_markup)
+        sendMarkup('🤬Chalaja BSDK🤬\nJoin channel & use', context.bot, update, reply_markup)
 
 def restart(update, context):
     restart_message = sendMessage("Restarting 🔧", context.bot, update)
@@ -241,11 +241,11 @@ def main():
     if os.path.isfile(".restartmsg"):
         with open(".restartmsg") as f:
             chat_id, msg_id = map(int, f)
-        bot.edit_message_text("╭──《♻️ 𝐁𝐎𝐓 𝐆𝐎𝐓 𝐑𝐄𝐒𝐓𝐀𝐑𝐓𝐄𝐃 ♻️》\n│\n├─𝐑𝐞-𝐌𝐢𝐫𝐫𝐨𝐫 𝐘𝐨𝐮𝐫 𝐓𝐡𝐢𝐧𝐠𝐬 🖤\n│\n├─🖥️ #𝐑𝐞𝐬𝐭𝐚𝐫𝐭𝐞𝐝\n│\n╰──『💥 𝐑𝐨𝐨𝐭 𝐆𝐚𝐦𝐞𝐫 💥』", chat_id, msg_id)
+        bot.edit_message_text("╭──《♻️ 𝐁𝐎𝐓 𝐆𝐎𝐓 𝐑𝐄𝐒𝐓𝐀𝐑𝐓𝐄𝐃 ♻️》\n│\n├─🌀𝐑𝐞-𝐌𝐢𝐫𝐫𝐨𝐫 𝐘𝐨𝐮𝐫 𝐓𝐡𝐢𝐧𝐠\n│\n├─🖥️ #𝐑𝐞𝐬𝐭𝐚𝐫𝐭𝐞𝐝\n│\n╰──『💥 𝐑𝐨𝐨𝐭 𝐆𝐚𝐦𝐞𝐫 💥』", chat_id, msg_id)
         os.remove(".restartmsg")
     elif OWNER_ID:
         try:
-            text = "♻️ 𝐁𝐎𝐓 𝐆𝐎𝐓 𝐑𝐄𝐒𝐓𝐀𝐑𝐓𝐄𝐃 ♻️\n\n\n🤖𝙿𝙻𝙴𝙰𝚂𝙴 𝚁𝙴-𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝙰𝙶𝙰𝙸𝙽🤖\n\n🖥️#Restarted\n\nRoot Gamer"
+            text = "♻️ 𝐁𝐎𝐓 𝐆𝐎𝐓 𝐑𝐄𝐒𝐓𝐀𝐑𝐓𝐄𝐃 ♻️\n\n\n🤖𝙿𝙻𝙴𝙰𝚂𝙴 𝚁𝙴-𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝙰𝙶𝙰𝙸𝙽🤖\n\n🖥️#Restarted\n\n<i><b>Root Gamer"
             bot.sendMessage(chat_id=OWNER_ID, text=text, parse_mode=ParseMode.HTML)
             if AUTHORIZED_CHATS:
                 for i in AUTHORIZED_CHATS:
