@@ -44,7 +44,7 @@ def stats(update, context):
     mem_a = get_readable_file_size(memory.available)
     mem_u = get_readable_file_size(memory.used)
     stats = f'╭───『🤖 𝑩𝒐𝒕 𝑺𝒕𝒂𝒕𝒊𝒄𝒔 🤖』\n│\n├─⏳<b>Bot Uptime:</b> {currentTime}\n│\n'\
-            f'├─💽<b>Total Storage:</b> {total}\n'\
+            f'├─💽<b>Storage:</b> {total}\n'\
             f'├─💻<b>Used:</b> {used}\n├─💾<b>Free:</b> {free}\n'\
             f'├─📤<b>Upload:</b> {sent}\n'\
             f'├─📥<b>Download:</b> {recv}\n│\n'\
