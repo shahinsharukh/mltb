@@ -66,13 +66,13 @@ class TgUploader:
 
     def upload_file(self, up_path, filee, dirpath):
         if CUSTOM_FILENAME is not None:
-            cap_mono = f"{CUSTOM_FILENAME} <code>{filee}</code>"
+            cap_mono = f"{CUSTOM_FILENAME} <b>{filee}</b>"
             filee = f"{CUSTOM_FILENAME} {filee}"
             new_path = os.path.join(dirpath, filee)
             os.rename(up_path, new_path)
             up_path = new_path
         else:
-            cap_mono = f"<code>{filee}</code>"
+            cap_mono = f"<b>{filee}</b>"
         notMedia = False
         thumb = self.thumb
         try:

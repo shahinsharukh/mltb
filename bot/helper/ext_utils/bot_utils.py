@@ -161,7 +161,7 @@ def get_readable_message():
                 msg += f" | ⏲️<b>Time :</b>{get_readable_time(download.torrent_info().seeding_time)}"
                 msg += f"\n<code>/{BotCommands.CancelMirror} {download.gid()}</code>"
             else:
-                msg += f"\n💾<b>Size: </b>{download.size()}"
+                msg += f"\n╰─💾<b>Size: </b>{download.size()}"
             msg += "\n\n"
             if STATUS_LIMIT is not None and index == STATUS_LIMIT:
                 break
