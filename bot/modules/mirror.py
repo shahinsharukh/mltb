@@ -224,7 +224,7 @@ class MirrorListener(listeners.MirrorListeners):
                 sendMessage(msg, self.bot, self.update)
             else:
                 chat_id = str(self.message.chat.id)[4:]
-                msg += f'\n│\n├─📬<b>cc: </b>{uname}\n│\n╰───『💥 <a href="https://t.me/+SpnPh2Gc8kHwwAAF"><b>𝐑𝐨𝐨𝐭 𝐆𝐚𝐦𝐞𝐫</b></a> 💥』\n\n'
+                msg += f'\n│\n├─📬<b>cc: </b>{uname}\n│\n╰───『💥 <a href="https://t.me/+rjExx-pjqEIzZGQ1"><b>Root Gamers & ShaRukh</b></a> 💥』\n\n'
                 fmsg = ''
                 for index, item in enumerate(list(files), start=1):
                     msg_id = files[item]
