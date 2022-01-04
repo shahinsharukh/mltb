@@ -241,11 +241,11 @@ def main():
     if os.path.isfile(".restartmsg"):
         with open(".restartmsg") as f:
             chat_id, msg_id = map(int, f)
-        bot.edit_message_text("╭──『♻️ 𝐁𝐎𝐓 𝐆𝐎𝐓 𝐑𝐄𝐒𝐓𝐀𝐑𝐓𝐄𝐃 ♻️』\n│\n├─🌀𝐑𝐞-𝐌𝐢𝐫𝐫𝐨𝐫 𝐘𝐨𝐮𝐫 𝐓𝐡𝐢𝐧𝐠\n│\n├─🖥️ 𝐑𝐞𝐬𝐭𝐚𝐫𝐭𝐞𝐝\n│\n╰──『💥 𝑅𝑜𝑜𝓉 𝒢𝒶𝓂𝑒𝓇 & 𝒮𝒽𝒶𝑅𝓊𝓀𝒽 💥』", chat_id, msg_id)
+        bot.edit_message_text("╭──『♻️ 𝐁𝐎𝐓 𝐆𝐎𝐓 𝐑𝐄𝐒𝐓𝐀𝐑𝐓𝐄𝐃 ♻️』\n│\n├─🌀𝐑𝐞-𝐌𝐢𝐫𝐫𝐨𝐫 𝐘𝐨𝐮𝐫 𝐓𝐡𝐢𝐧𝐠\n│\n├─🖥️ 𝐑𝐞𝐬𝐭𝐚𝐫𝐭𝐞𝐝\n│\n╰──『💥 𝓡𝓸𝓸𝓽 𝓖𝓪𝓶𝓮𝓻 & 𝓢𝓱𝓪𝓡𝓾𝓴𝓱 💥』", chat_id, msg_id)
         os.remove(".restartmsg")
     elif OWNER_ID:
         try:
-            text = "╭──『♻️ 𝐁𝐎𝐓 𝐆𝐎𝐓 𝐑𝐄𝐒𝐓𝐀𝐑𝐓𝐄𝐃 ♻️』\n│\n├─🌀𝐑𝐞-𝐌𝐢𝐫𝐫𝐨𝐫 𝐘𝐨𝐮𝐫 𝐓𝐡𝐢𝐧𝐠\n│\n├─🖥️ 𝐑𝐞𝐬𝐭𝐚𝐫𝐭𝐞𝐝\n│\n╰──『💥 𝑅𝑜𝑜𝓉 𝒢𝒶𝓂𝑒𝓇 & 𝒮𝒽𝒶𝑅𝓊𝓀𝒽 💥』"
+            text = "╭──『♻️ 𝐁𝐎𝐓 𝐆𝐎𝐓 𝐑𝐄𝐒𝐓𝐀𝐑𝐓𝐄𝐃 ♻️』\n│\n├─🌀𝐑𝐞-𝐌𝐢𝐫𝐫𝐨𝐫 𝐘𝐨𝐮𝐫 𝐓𝐡𝐢𝐧𝐠\n│\n├─🖥️ 𝐑𝐞𝐬𝐭𝐚𝐫𝐭𝐞𝐝\n│\n╰──『💥 𝓡𝓸𝓸𝓽 𝓖𝓪𝓶𝓮𝓻 & 𝓢𝓱𝓪𝓡𝓾𝓴𝓱 💥』"
             bot.sendMessage(chat_id=OWNER_ID, text=text, parse_mode=ParseMode.HTML)
             if AUTHORIZED_CHATS:
                 for i in AUTHORIZED_CHATS:
