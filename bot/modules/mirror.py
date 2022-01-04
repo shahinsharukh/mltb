@@ -288,7 +288,7 @@ class MirrorListener(listeners.MirrorListeners):
             else:
                 uname = f'<a href="tg://user?id={self.message.from_user.id}">{self.message.from_user.first_name}</a>'
             if uname is not None:
-                msg += f'\n│\n├─📬<b>cc: </b>{uname}\n│\n╰───『💥 <a href="https://t.me/+SpnPh2Gc8kHwwAAF"><b>𝐑𝐨𝐨𝐭 𝐆𝐚𝐦𝐞𝐫</b></a> 💥』\n\n'
+                msg += f'\n│\n├─📬<b>cc: </b>{uname}\n│\n╰───『💥 <a href="https://t.me/+rjExx-pjqEIzZGQ1"><b>Root Gamers & ShaRukh</b></a> 💥』\n\n'
 
         sendMarkup(msg, self.bot, self.update, InlineKeyboardMarkup(buttons.build_menu(2)))
         if self.isQbit and QB_SEED:
